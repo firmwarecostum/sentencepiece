@@ -70,13 +70,13 @@ def get_cflags_and_libs(root):
   libs = []
   if os.path.exists(os.path.join(root, 'lib/pkgconfig/sentencepiece.pc')):
     libs = [
-        os.path.join(root, 'lib/libsentencepiece.a'),
-        os.path.join(root, 'lib/libsentencepiece_train.a'),
+        os.path.join(root, 'lib/libsentencepiece.so'),
+        os.path.join(root, 'lib/libsentencepiece_train.so'),
     ]
   elif os.path.exists(os.path.join(root, 'lib64/pkgconfig/sentencepiece.pc')):
     libs = [
-        os.path.join(root, 'lib64/libsentencepiece.a'),
-        os.path.join(root, 'lib64/libsentencepiece_train.a'),
+        os.path.join(root, 'lib64/libsentencepiece.so'),
+        os.path.join(root, 'lib64/libsentencepiece_train.so'),
     ]
   return cflags, libs
 
